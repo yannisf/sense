@@ -20,4 +20,4 @@ for t in linspace(0.0, 4.965, num=3000):
     print("r=%d" % (red_intensity))
     color = [red_intensity, 0, 0]
     sense.clear(color)
-    sleep(0.001)
+    sleep(0.0005)
