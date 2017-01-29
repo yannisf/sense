@@ -1,39 +1,42 @@
 #!/usr/bin/python
-from sense_hat import SenseHat
+"""
+A simple game
+"""
 from random import randint
 from time import sleep
+from sense_hat import SenseHat
 
 sense = SenseHat()
 sense.low_light = True
 sense.clear()
 
-red = (255,0,0)
+red = (255, 0, 0)
 
 matrix = [
-    [0,0,0,0,0,0,0,0],
-    [0,0,0,0,0,0,0,0],
-    [0,0,0,0,0,0,0,0],
-    [0,0,0,0,0,0,0,0],
-    [0,0,0,0,0,0,0,0],
-    [0,0,0,0,0,0,0,0],
-    [0,0,0,0,0,0,0,0],
-    [0,0,0,0,0,0,0,0],
+    [0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0],
 ]
 
 i = 0
 k = 0
-while (i < 64):
+while i < 64:
     # print "Iteration: ", k
     k += 1
-    x = randint(0,7)
-    y = randint(0,7)
+    x = randint(0, 7)
+    y = randint(0, 7)
     sleep(0.01)
     # print (x,y)
     if matrix[x][y] == 0:
         # print "HIT"
         matrix[x][y] = 1
         i += 1
-        sense.set_pixel(x,y, red)
+        sense.set_pixel(x, y, red)
     # else:
         # print "MISS"
 

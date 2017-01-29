@@ -1,11 +1,19 @@
 #!/usr/bin/python
-from sense_hat import SenseHat
+"""
+Paint a skull on the matrix
+"""
 from random import randint
+from sense_hat import SenseHat
 
 sense = SenseHat()
+sense.set_rotation(180)
 
 def render(X, O):
-    heart = [
+    """
+    Render the matrix
+    """
+
+    skull = [
     O, O, O, O, O, O, O, O,
     O, O, X, X, X, X, X, O,
     O, X, X, X, X, X, X, X,
@@ -16,9 +24,8 @@ def render(X, O):
     O, O, X, O, X, O, X, O
     ]
 
-    sense.set_pixels(heart)
+    sense.set_pixels(skull)
 
-heart_color = [randint(0,255), randint(0,255), randint(0,255)]
-background = [0,0,0]
-heart_color = [randint(0,255), randint(0,255), randint(0,255)]
-render(heart_color, background)
+skull_color = [randint(0, 255), randint(0, 255), randint(0, 255)]
+background = [0, 0, 0]
+render(skull_color, background)
