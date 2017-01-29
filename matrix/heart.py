@@ -18,6 +18,7 @@ def render(X, O):
     O, O, O, O, O, O, O, O
     ]
 
+    print(heart)
     sense.set_pixels(heart)
 
 heart_color = [randint(0,255), randint(0,255), randint(0,255)]
