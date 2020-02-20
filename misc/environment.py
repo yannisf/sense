@@ -8,7 +8,7 @@ from sense_hat import SenseHat
 
 sense = SenseHat()
 sense.clear()
-sense.set_rotation(180)
+#sense.set_rotation(180)
 scroll_speed = 0.06
 
 raw_name = sys.argv[0]
